@@ -1,4 +1,4 @@
-起始配置
+﻿起始配置
 git config --global user.name "Your Name"    设置名称
 git config --global user.email "email@example.com"		设置邮箱
 注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
@@ -48,9 +48,9 @@ git revert 版本号			做反向操作覆盖，撤销指定版本和其之后版
 
 git checkout 分支名			切换到指定分支
 git checkout -- 文件名		用当前版本库（HEAD指针指向的版本）里的指定文件的版本替换工作区的版本（相当于撤销工作区的修改），无论工作区是修改还是删除，都可以“一键还原”。
-							先用<git reset HEAD 文件名>默认参数--mixed重置版本库和暂存区 再用此条命令可以撤销已经提交到暂存区的修改
-git checkout 版本号 -- 文件名 可以把指定文件重置到指定版本然后commit可以形成合法的回退推到远程
-git reset --hard HEAD	    用当前版本库（HEAD指针指向的版本）里的所有文件的版本替换工作区的版本
+				先用<git reset HEAD 文件名>默认参数--mixed重置版本库和暂存区 再用此条命令可以撤销已经提交到暂存区的修改
+git checkout 版本号 -- 文件名                    可以把工作区指定文件重置到指定版本然后commit可以形成合法的回退推到远程
+git reset --hard HEAD	                用当前版本库（HEAD指针指向的版本）里的所有文件的版本替换掉工作区的版本
 
 git branch 					显示所有本地分支
 git branch 分支名 		  	创建新分支
